@@ -8,11 +8,7 @@ const publicRoutes: Routes = [
     title: environment.appTitle,
     component: PublicLayoutComponent,
     children: [
-      {
-        path: '',
-        loadComponent: () =>
-          import('@public/pages/_home/public-home-page.component'),
-      },
+      
       {
         path: 'auth/login',
         loadComponent: () =>
@@ -23,6 +19,16 @@ const publicRoutes: Routes = [
         loadComponent: () =>
           import('@public/pages/auth/public-register-page/public-register-page.component'),
       },
+      {
+        path: '',
+        loadComponent: () =>
+          import('@public/pages/_home/public-home-page.component'),
+      },
+      /* {
+        path: 'auth/**',
+        redirectTo:'auth/login',
+        pathMatch:'full',
+      }, */
     ],
   },
   

@@ -13,24 +13,13 @@
           formControlName="email"
         />
       </label>
-      @if(loginForm.controls['email'].touched &&
-      loginForm.controls['email'].errors){
-
-      <shared-field-error-message message="Por favor, ingresa una dirección de correo válida (ejemplo@correo.com)." />
-      }
     </div>
     <div class="mb-5">
       <label class="input">
         <span class="label">Contraseña</span>
         <input type="password" formControlName="password" />
       </label>
-        @if(loginForm.controls['password'].touched &&
-        loginForm.controls['password'].errors){
-  
-        <shared-field-error-message message="Tu contraseña debe tener al menos 8 caracteres." />
-        }
     </div>
-
     <div>
       <button type="submit" class="btn btn-primary w-full">Login</button>
       <p class="mt-4 text-center text-sm">
@@ -42,3 +31,5 @@
     </div>
   </form>
 </div>
+
+@if(hasError()){<shared-field-error-message message="Por Favor: Verifique la Información Ingresada" />}

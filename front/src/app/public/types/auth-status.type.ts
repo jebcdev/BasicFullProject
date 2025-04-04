@@ -1,0 +1,1 @@
+export type tAuthStatus = 'checking' | 'authenticated' | 'not-authenticated';

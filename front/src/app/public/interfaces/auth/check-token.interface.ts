@@ -7,8 +7,8 @@ export interface iCheckTokenResponse {
     surname:    string;
     email:      string;
     password:   string;
-    created_at: Date;
-    updated_at: Date;
-    deleted_at: null;
+    created_at?: Date;
+    updated_at?: Date;
+    deleted_at?: Date | null;
     role:       iRole;
 }
