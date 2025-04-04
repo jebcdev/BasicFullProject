@@ -11,21 +11,21 @@ const publicRoutes: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('@public/pages/public-home-page/public-home-page.component'),
+          import('@public/pages/_home/public-home-page.component'),
       },
       {
-        path: 'login',
+        path: 'auth/login',
         loadComponent: () =>
-          import('@public/pages/public-login-page/public-login-page.component'),
+          import('@public/pages/auth/public-login-page/public-login-page.component'),
       },
       {
-        path: 'register',
+        path: 'auth/register',
         loadComponent: () =>
-          import('@public/pages/public-register-page/public-register-page.component'),
+          import('@public/pages/auth/public-register-page/public-register-page.component'),
       },
     ],
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  
 ];
 
 

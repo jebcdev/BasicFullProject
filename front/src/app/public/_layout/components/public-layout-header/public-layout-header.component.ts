@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import environment from '@env/environment';
 import { iMenuItem } from '@public/interfaces';
+
 
 @Component({
   selector: 'public-layout-header',
@@ -14,6 +15,7 @@ import { iMenuItem } from '@public/interfaces';
   },
 })
 export default class PublicLayoutHeaderComponent {
+  
   title = computed<string>(() => environment.appTitle);
 
   menuItems = computed<iMenuItem[]>(() => [

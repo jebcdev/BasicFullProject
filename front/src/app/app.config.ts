@@ -1,5 +1,6 @@
 import {
   ApplicationConfig,
+  PLATFORM_ID,
   provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -12,5 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
     provideHttpClient(withFetch()),
+    { provide: PLATFORM_ID, useValue: 'browser' }
+
   ],
 };

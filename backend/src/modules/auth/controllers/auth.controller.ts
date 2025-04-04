@@ -7,9 +7,6 @@ import { plainToInstance } from "class-transformer";
 // Importa las funciones de "class-validator" para realizar validaciones de datos.
 import { validate, ValidationError } from "class-validator";
 
-// Importa tipos de TypeORM para manejar resultados de actualizaciones.
-import { UpdateResult } from "typeorm";
-
 // Importa el servicio de autenticación para manejar la lógica de negocio.
 import { AuthService } from "../services/auth.service";
 
@@ -94,7 +91,7 @@ export class AuthController {
                     id: data.role.id,
                     name: data.role.name,
                 },
-                createdAt: data.created_at,
+                created_at: data.created_at,
                 token,
             });
         } catch (error) {
@@ -200,14 +197,14 @@ export class AuthController {
             // Si el usuario fue creado correctamente, devuelve los datos del usuario registrado.
             return res.status(201).json({
                 id: data?.id,
-                    name: data?.name,
-                    surname: data?.surname,
-                    email: data?.email,
-                    role: {
-                        id: data?.role.id,
-                        name: data?.role.name,
-                    },
-                    createdAt: data?.created_at,
+                name: data?.name,
+                surname: data?.surname,
+                email: data?.email,
+                role: {
+                    id: data?.role.id,
+                    name: data?.role.name,
+                },
+                created_at: data?.created_at,
             });
         } catch (error) {
             console.log(error);

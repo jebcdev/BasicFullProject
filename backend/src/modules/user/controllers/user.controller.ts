@@ -53,7 +53,7 @@ export class UserController {
                     id: user.role?.id,
                     name: user.role?.name,
                 },
-                createdAt: user.created_at,
+                created_at: user.created_at,
             }));
 
             // Si los usuarios fueron encontrados, los devuelve con un mensaje de éxito.
@@ -95,7 +95,7 @@ export class UserController {
                     id: data?.role?.id,
                     name: data?.role?.name,
                 },
-                createdAt: data.created_at,
+                created_at: data.created_at,
             });
         } catch (error) {
             // Maneja cualquier error inesperado y devuelve un mensaje de error.
@@ -182,7 +182,7 @@ export class UserController {
                     id: newUserData?.role?.id,
                     name: newUserData?.role?.name,
                 },
-                createdAt: newUserData?.created_at,
+                created_at: newUserData?.created_at,
             });
         } catch (error) {
             // Maneja cualquier error inesperado y devuelve un mensaje de error.
@@ -267,7 +267,7 @@ export class UserController {
                     id: data?.role?.id,
                     name: data?.role?.name,
                 },
-                createdAt: data?.created_at,
+                created_at: data?.created_at,
             });
         } catch (error) {
             // Maneja cualquier error inesperado y devuelve un mensaje de error.

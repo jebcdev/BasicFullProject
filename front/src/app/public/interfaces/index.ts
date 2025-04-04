@@ -1,1 +1,6 @@
 export * from './menu-items.interface'
+export * from './auth/login-request.interface'
+export * from './auth/login-response.interface'
+export * from './auth/role.interface'
+export * from './auth/check-token.interface'
+export * from './auth/user.interface'
